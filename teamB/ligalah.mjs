@@ -1,4 +1,4 @@
-const ligalaData = {
+const ligalahData = {
     teamName: "Team B",
     firstname: "Ligalah",
     lastname: "Hezron",
@@ -10,9 +10,9 @@ const ligalaData = {
         git: "Ligalah",
       },
       {
-        twitter: "https://twitter.com/ligalahh",
+        twitter: "ligalahh",
       },
     ],
   };
   
-  export default ligalaData;
+  export default ligalahData;
