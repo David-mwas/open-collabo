@@ -2,10 +2,10 @@ import data from "./names.mjs";
 const dataDiv = document.querySelector(".data");
 
 window.addEventListener("load", openCollabo());
-setTimeout(() => {
-    // openCollabo();
-  window.location.reload();
-}, 7000);
+// setTimeout(() => {
+//     // openCollabo();
+//   window.location.reload();
+// }, 7000);
 function openCollabo() {
   console.log(data);
   data.map((item, index) => {
