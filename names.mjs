@@ -1,4 +1,4 @@
-import CalvinData from "./teamA/calvin.mjs";
+import CalvinData from "./teamB/calvin.mjs";
 import davidData from "./teamA/david.mjs";
 import david1Data from "./teamB/david.mjs";
 import nevilleData from "./teamA/neville.mjs";
