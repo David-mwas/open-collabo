@@ -4,7 +4,7 @@ const yourNameData = {
     lastname: "Hezron",
     email: "ligahh@gmail.com",
     role: "Developer",
-    skills: ["HTML", "CSS", "JavaScript", "Angular"],
+    skills: [ "JavaScript", "Angular", "kaboomJS", "NodeJS"],
     socials: [
       {
         git: "Ligalah",
