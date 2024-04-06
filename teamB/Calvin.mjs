@@ -1,9 +1,9 @@
 const CalvinData = {
-    teamName: "teamA",
+    teamName: "teamB",
     firstname: "Calvin",
     lastname: "muemah",
     email: "kelvinmuemah855@gmail.com",
-    role: "frontend developer",
+    role: "frontend dev",
     skills: ["HTML", "Js", "css"],
     socials: [
       {
