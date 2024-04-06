@@ -1,4 +1,4 @@
-const nevilleDataData = {
+const nevilleData = {
     teamName: "team A",
     firstname: "Neville",
     lastname: "Evan",
