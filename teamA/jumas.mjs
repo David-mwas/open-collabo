@@ -1,10 +1,10 @@
 const jumadata = {
     teamName: " A",
-    firstname: "Willington Juma",
-    lastname: "Your Last Name",
+    firstname: "Willington",
+    lastname: "Juma",
     email: "willingtonejumamconyango@gmail.com",
     role: "Backended developer",
-    skills: ["HTMl ", "Django", "python"],
+    skills: ["SQL ", "Django", "python"],
     socials: [
       {
         git: "samrato",
