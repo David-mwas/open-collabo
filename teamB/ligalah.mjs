@@ -1,4 +1,4 @@
-const yourNameData = {
+const ligalaData = {
     teamName: "Team B",
     firstname: "Ligalah",
     lastname: "Hezron",
