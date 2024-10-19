@@ -1,16 +1,54 @@
 import data from "./names.mjs";
 const dataDiv = document.querySelector(".data");
 
-window.addEventListener("load", openCollabo());
-// setTimeout(() => {
-//     // openCollabo();
-//   window.location.reload();
-// }, 7000);
+window.addEventListener("load", openCollabo);
+
 function openCollabo() {
-  console.log(data);
-  data.map((item, index) => {
+  let teamACount = 0;
+  let teamBCount = 0;
+
+  // Count team members
+  data.forEach((item) => {
+    const teamNameLower = item.teamName.toLowerCase();
+    if (teamNameLower === "team a" || teamNameLower === "a") {
+      teamACount++;
+    } else if (teamNameLower === "team b" || teamNameLower === "b") {
+      teamBCount++;
+    }
+  });
+
+  // Create a container for the badges
+  const badgeContainer = document.createElement("div");
+  badgeContainer.classList.add("badge-container");
+
+  // Create badges for the counts
+  const badgeA = document.createElement("span");
+  const badgeB = document.createElement("span");
+
+  badgeA.classList.add("badge", "badge-a");
+  badgeA.innerText = `Team A: ${teamACount}`;
+  badgeB.classList.add("badge", "badge-b");
+  badgeB.innerText = `Team B: ${teamBCount}`;
+
+  // Append badges to badge container
+  badgeContainer.appendChild(badgeA);
+  badgeContainer.appendChild(badgeB);
+
+  // Append the badge container below the h1
+  const header = document.querySelector("h1");
+  header.after(badgeContainer);
+
+  // Create team cards
+  data.map((item) => {
     let box = document.createElement("div");
     box.classList.add("box");
+
+    const teamNameLower = item.teamName.toLowerCase();
+    if (teamNameLower === "team a" || teamNameLower === "a") {
+      box.classList.add("team-a");
+    } else if (teamNameLower === "team b" || teamNameLower === "b") {
+      box.classList.add("team-b");
+    }
 
     let teamname = document.createElement("h2");
     teamname.innerHTML = `${item.teamName}`;
@@ -35,8 +73,8 @@ function openCollabo() {
       skill.classList.add("skill");
       skill.innerHTML = skillitem;
       skilldiv.appendChild(skill);
-      box.appendChild(skilldiv);
     });
+    box.appendChild(skilldiv);
 
     const socialdiv = document.createElement("div");
     skilldiv.classList.add("socialdiv");

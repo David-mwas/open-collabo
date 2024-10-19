@@ -1,87 +1,162 @@
+/* Badge container styles */
+.badge-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.badge-a {
+  background-color: aliceblue;
+  color: blueviolet;
+  border: 2px solid blueviolet;
+}
+
+.badge-b {
+  background-color: #f0fff0;
+  color: #32cd32; /* Green shade */
+  border: 2px solid #32cd32;
+}
+
+/* The rest of your existing styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   width: 100vw;
   height: 100vh;
-  font-family: Arial, sans-serif;
-  /* color: rgb(240, 248, 255); */
-  background: linear-gradient(rgb(240, 248, 255, 0.9), rgb(240, 248, 255, 0.9)),
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(rgba(240, 248, 255, 0.9), rgba(240, 248, 255, 0.9)),
     url("./assets/t7r2SUHNUEOo1M3rEQV7BUFulPlKUKvqyyE6GSjJ.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   overflow-x: hidden;
   padding: 20px;
 }
+
 .container {
   gap: 20px;
   display: flex;
   flex-direction: column;
   padding: 20px;
   width: 100%;
-  /* align-items: center; */
   justify-content: center;
 }
-.data {
-  width: 100%;
-  flex-direction: row;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-}
-.data .box {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
 
-  flex: 1;
-  height: 100%;
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: blueviolet;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Masonry layout */
+.data {
+  column-count: 4;
+  column-gap: 20px;
+  width: 100%;
+}
+
+.data .box {
+  background: #fff;
+  margin-bottom: 20px;
   padding: 20px;
   border-radius: 20px;
-  padding-left: 40px;
-
   box-shadow: 1px 2px 13px blueviolet;
   transition: all 0.3s ease-in-out;
+  break-inside: avoid;
 }
+
 .data .box:hover {
   box-shadow: inset 1px 2px 30px blueviolet;
   transform: scale(1.05);
 }
-.skilldiv {
-  width: 100%;
-  flex-wrap: wrap;
+
+.data h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: blueviolet;
+  margin-bottom: 10px;
+}
+
+.data h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.data p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.data .skilldiv {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-.social {
-  margin: 10px;
-}
+
 .skill {
   font-weight: 500;
-
   padding: 6px;
   background: blueviolet;
   color: aliceblue;
   border-radius: 6px;
-  padding-left: 8px;
-  padding-right: 8px;
 }
+
+.social {
+  margin-top: 10px;
+  color: #555;
+  font-size: 1rem;
+}
+
+.social a {
+  color: blueviolet;
+  text-decoration: none;
+}
+
+.social a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 768px) {
   .data {
-    flex-direction: row;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    column-count: 2;
   }
 }
+
 @media screen and (max-width: 568px) {
   .data {
-    flex-direction: row;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    column-count: 1;
   }
+}
+
+/* Team A and Team B borders */
+.team-a {
+  border: 2px solid blueviolet;
+}
+
+.team-b {
+  border: 2px solid #32cd32;
+}
+
+.team-a:hover {
+  box-shadow: inset 1px 2px 30px blueviolet;
+}
+
+.team-b:hover {
+  box-shadow: inset 1px 2px 30px #32cd32;
 }
