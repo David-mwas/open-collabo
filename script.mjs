@@ -9,10 +9,14 @@ function openCollabo() {
 
   // Count team members
   data.forEach((item) => {
-    const teamNameLower = item.teamName.toLowerCase();
+    const teamNameLower = item.teamName.trim().toLowerCase();
     if (teamNameLower === "team a" || teamNameLower === "a") {
       teamACount++;
-    } else if (teamNameLower === "team b" || teamNameLower === "b") {
+    } else if (
+      teamNameLower === "team b" ||
+      teamNameLower === "b" ||
+      teamNameLower === "teamb"
+    ) {
       teamBCount++;
     }
   });
@@ -43,10 +47,14 @@ function openCollabo() {
     let box = document.createElement("div");
     box.classList.add("box");
 
-    const teamNameLower = item.teamName.toLowerCase();
+    const teamNameLower = item.teamName.trim().toLowerCase();
     if (teamNameLower === "team a" || teamNameLower === "a") {
       box.classList.add("team-a");
-    } else if (teamNameLower === "team b" || teamNameLower === "b") {
+    } else if (
+      teamNameLower === "team b" ||
+      teamNameLower === "b" ||
+      teamNameLower === "teamb"
+    ) {
       box.classList.add("team-b");
     }
 
