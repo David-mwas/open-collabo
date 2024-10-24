@@ -3,7 +3,7 @@ const ibrahimData = {
     firstname: "Ibrahim",
     lastname: "Bulle",
     email: "ibrahmbulle@example.com",
-    role: "Student",
+    role: "Front-end",
     skills: ["HTML", "CSS", "JAVASCRIPT","C","C++","JAVA","PYTHON","KOTLIN","DJANGO"],
     socials: [
       {
